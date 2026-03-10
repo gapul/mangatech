@@ -1,12 +1,6 @@
 import Header from "@/components/Header";
 import MangaPanel from "@/components/MangaPanel";
-
-const MOCK_PANELS = [
-    { id: "p1", src: "/assets/panels/panel-city.png", alt: "City view" },
-    { id: "p2", src: "/assets/panels/panel-noodles.png", alt: "Eating noodles" },
-    { id: "p3", src: "/assets/panels/panel-food.png", alt: "Food reaction" },
-    { id: "p4", src: "/assets/panels/panel-shock.png", alt: "Shocked face" },
-];
+import { assetPath } from "@/lib/assetPath";
 
 export default function ReadPage() {
     return (
@@ -26,7 +20,7 @@ export default function ReadPage() {
                     {/* Top Panel (Wide) */}
                     <MangaPanel
                         id="p1"
-                        src="/assets/panels/panel-city.png"
+                        src={assetPath("/assets/panels/panel-city.png")}
                         alt="City view"
                         className="w-full h-48 border-4 border-black"
                     />
@@ -36,14 +30,14 @@ export default function ReadPage() {
                         {/* Left split */}
                         <MangaPanel
                             id="p4"
-                            src="/assets/panels/panel-shock.png"
+                            src={assetPath("/assets/panels/panel-shock.png")}
                             alt="Shocked face"
                             className="w-2/5 h-full border-4 border-black"
                         />
                         {/* Right split */}
                         <MangaPanel
                             id="p2"
-                            src="/assets/panels/panel-noodles.png"
+                            src={assetPath("/assets/panels/panel-noodles.png")}
                             alt="Eating noodles"
                             className="w-3/5 h-full border-4 border-black"
                         />
@@ -52,7 +46,7 @@ export default function ReadPage() {
                     {/* Bottom Panel (Action) */}
                     <MangaPanel
                         id="p3"
-                        src="/assets/panels/panel-food.png"
+                        src={assetPath("/assets/panels/panel-food.png")}
                         alt="Food reaction"
                         className="w-full h-56 border-4 border-black"
                     />

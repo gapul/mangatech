@@ -1,26 +1,28 @@
 "use client";
 
 import Header from "@/components/Header";
-import { Settings, Image as ImageIcon } from "lucide-react";
+import { Settings } from "lucide-react";
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 export default function ProfilePage() {
     const history = [
         {
             id: "h1",
-            panel: "/assets/panels/panel-shock.png",
+            panel: assetPath("/assets/panels/panel-shock.png"),
             text: "この引きはズルい。来週まで待てない！！",
             date: "2026.03.01",
             likes: 85
         },
         {
             id: "h2",
-            panel: "/assets/panels/panel-noodles.png",
+            panel: assetPath("/assets/panels/panel-noodles.png"),
             text: "こういう日常回があるからこそ、バトルの重みが増すんだよな。",
             date: "2026.02.26",
             likes: 412
         }
     ];
+
 
     return (
         <div className="flex flex-col min-h-screen relative z-10 bg-[#e0e0e0] text-[var(--color-deep-black)]">
